@@ -44,7 +44,7 @@ public abstract class File {
     public Boolean getReadOnly(){
         return readOnly;
     }
-    public String isReadOnly(){// такое наименование, которое начинается с is или has - присуще boolean типу. Может boolean и string объединить, поменять логику.
+    public String ReadOnlyStr(){
         if(this.readOnly){
             return "read only";
         }
@@ -54,16 +54,19 @@ public abstract class File {
     }
     public String getParentDir(){
         if (this.name.equals("\\")){
-            return "root Dir";
+            return "root";
         } else {
             return parentDir.getName();
         }
 
     }
     public void setParentDir(Directory ParentDir){
-        this.parentDir = ParentDir;
-    }
+         this.parentDir = ParentDir;
+       }
 
+    public void serParentDir(){
+        this.parentDir.setName("root");;
+    }
 
     protected void showDir() {
         System.out.println("Directory: " + this.getParentDir());
@@ -71,14 +74,11 @@ public abstract class File {
 
     protected void showFile() { System.out.println(" --- " + this.getName() + "." +
             this.getExt() + "( size: " + this.getSize() + " )" + "rights: " +
-            this.isReadOnly());
+            this.ReadOnlyStr());
     }
 
-     public void fileInfo(){    //Спасибо, что тыкнуля сюда носом. И правда сам не догадался. Так правильнее же?
+     public void fileInfo(){
         showDir();
         showFile();
     }
-    //жублирование кода
-    //если ты выносишь информацию о директории в отдельный метод, тогда в методе fileInfo можно использовать этот метод, а не дублировать код.
-
  }

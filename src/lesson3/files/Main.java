@@ -3,15 +3,13 @@ package lesson3.files;
 public class Main {
     public static void main(String[] args) {
 
-        // Роман. Коменты на английском это я понимаю. Но для тебя пока пишу на русском.
+        // Роман. Коменты на английском это я понимаю. Но для лучшего понимания пока пишу на русском.
         // Или сразу пытаться на английском писать?
-        // File rootDir = new Directory(); - если я так сделаю, то нужно конструкторы переписывать
-        // из директории, что касается рута
 
-        Directory rootDir = new Directory();//Так как и директория и все файлы наследуются от File и там есть все их методы, то можно
-        rootDir.showDir();// применять полиморфизм. Типа так File rootDir = new Directory();
+        Directory rootDir = new Directory();
+        rootDir.showDir();
 
-        TextFile dontReadme = new TextFile("DO_NOT_READ_ME", rootDir);
+        TextFile dontReadme = new TextFile("dontReadme", rootDir);
         dontReadme.fileInfo();
 
         Directory musicDir = new Directory("Music", rootDir);
