@@ -26,7 +26,7 @@ public abstract class File {
 
     public  void  setExt(String ext){
         this.ext = ext;
-    }
+    }// все еще не между всеми методами есть пустая строка
     public String getExt(){
         return ext;
     }
@@ -44,11 +44,10 @@ public abstract class File {
     public Boolean getReadOnly(){
         return readOnly;
     }
-    public String ReadOnlyStr(){
-        if(this.readOnly){
+    public String ReadOnlyStr(){ //название метода с маленькой буквы
+        if (this.readOnly){
             return "read only";
-        }
-        else {
+        } else {
             return "writable";
         }
     }
@@ -64,8 +63,8 @@ public abstract class File {
          this.parentDir = ParentDir;
        }
 
-    public void serParentDir(){
-        this.parentDir.setName("root");;
+    public void serParentDir(){ //если метод не вызывается - это мертвый код, удалить. Или вызвать))
+        this.parentDir.setName("root");
     }
 
     protected void showDir() {
@@ -75,7 +74,7 @@ public abstract class File {
     protected void showFile() { System.out.println(" --- " + this.getName() + "." +
             this.getExt() + "( size: " + this.getSize() + " )" + "rights: " +
             this.ReadOnlyStr());
-    }
+    } //Для того, чтобы выровнить все отступы, попробуй нажать комбинацию Ctrl+Alt+L
 
      public void fileInfo(){
         showDir();
