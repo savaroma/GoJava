@@ -1,14 +1,15 @@
 package lesson3.files;
 
 public class AudioFile extends File {
-    public AudioFile(){
+    public AudioFile() {
         super.setContent("");
         super.setName("unnamed");
         super.setExt("audio");
         super.setSize(0);
         super.setReadOnly(false);
     }
-    public AudioFile(Directory dir){
+
+    public AudioFile(Directory dir) {
         super.setContent("");
         super.setName("unnamed");
         super.setExt("audio");
@@ -16,7 +17,8 @@ public class AudioFile extends File {
         super.setSize(0);
         super.setReadOnly(false);
     }
-    public AudioFile(Directory dir, String content){
+
+    public AudioFile(Directory dir, String content) {
         super.setContent(content);
         super.setName("unnamed");
         super.setExt("audio");
@@ -24,6 +26,7 @@ public class AudioFile extends File {
         super.setSize(0);
         super.setReadOnly(false);
     }
+
     public AudioFile(String name) {
         super.setContent("");
         super.setName(name);
@@ -31,6 +34,7 @@ public class AudioFile extends File {
         super.setSize(0);
         super.setReadOnly(false);
     }
+
     public AudioFile(String name, String content) {
         super.setContent(content);
         super.setName(name);
@@ -38,7 +42,8 @@ public class AudioFile extends File {
         super.setSize(0);
         super.setReadOnly(false);
     }
-    public AudioFile(String name, Directory dir){
+
+    public AudioFile(String name, Directory dir) {
         super.setContent("");
         super.setName(name);
         super.setExt("audio");
@@ -46,7 +51,8 @@ public class AudioFile extends File {
         super.setSize(0);
         super.setReadOnly(false);
     }
-    public AudioFile(String name, String content, Directory dir){
+
+    public AudioFile(String name, String content, Directory dir) {
         super.setContent(content);
         super.setName(name);
         super.setExt("audio");
@@ -54,7 +60,8 @@ public class AudioFile extends File {
         super.setSize(0);
         super.setReadOnly(false);
     }
-    public AudioFile(String name, Directory dir, Integer size){
+
+    public AudioFile(String name, Directory dir, Integer size) {
         super.setContent("");
         super.setName(name);
         super.setExt("audio");
@@ -63,7 +70,8 @@ public class AudioFile extends File {
         super.setSize(size);
         super.setReadOnly(false);
     }
-    public AudioFile(String name, String content, Directory dir, Integer size){
+
+    public AudioFile(String name, String content, Directory dir, Integer size) {
         super.setContent(content);
         super.setName(name);
         super.setExt("audio");
@@ -72,7 +80,8 @@ public class AudioFile extends File {
         super.setSize(size);
         super.setReadOnly(false);
     }
-    public AudioFile(String name, Integer size){
+
+    public AudioFile(String name, Integer size) {
         super.setContent("");
         super.setName(name);
         super.setExt("audio");
@@ -80,7 +89,8 @@ public class AudioFile extends File {
         super.setSize(size);
         super.setReadOnly(false);
     }
-    public AudioFile(String name, String content, Integer size){
+
+    public AudioFile(String name, String content, Integer size) {
         super.setContent(content);
         super.setName(name);
         super.setExt("audio");
@@ -88,7 +98,8 @@ public class AudioFile extends File {
         super.setSize(size);
         super.setReadOnly(false);
     }
-    public AudioFile(String name, Directory dir, Integer size, boolean readOnly){
+
+    public AudioFile(String name, Directory dir, Integer size, boolean readOnly) {
         super.setContent("");
         super.setName(name);
         super.setExt("audio");
@@ -97,7 +108,8 @@ public class AudioFile extends File {
         super.setSize(size);
         super.setReadOnly(readOnly);
     }
-    public AudioFile(String name, String content, Directory dir, Integer size, boolean readOnly){
+
+    public AudioFile(String name, String content, Directory dir, Integer size, boolean readOnly) {
         super.setContent(content);
         super.setName(name);
         super.setExt("audio");
@@ -106,7 +118,8 @@ public class AudioFile extends File {
         super.setSize(size);
         super.setReadOnly(readOnly);
     }
-    public AudioFile(Directory dir, Integer size, boolean readOnly){
+
+    public AudioFile(Directory dir, Integer size, boolean readOnly) {
         super.setContent("");
         super.setName("Unnamed");
         super.setExt("audio");
@@ -115,7 +128,8 @@ public class AudioFile extends File {
         super.setSize(size);
         super.setReadOnly(readOnly);
     }
-    public AudioFile(Directory dir, String content,Integer size, boolean readOnly){
+
+    public AudioFile(Directory dir, String content, Integer size, boolean readOnly) {
         super.setContent(content);
         super.setName("Unnamed");
         super.setExt("audio");

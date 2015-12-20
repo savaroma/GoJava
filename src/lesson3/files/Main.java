@@ -3,9 +3,6 @@ package lesson3.files;
 public class Main {
     public static void main(String[] args) {
 
-        // Роман. Коменты на английском это я понимаю. Но для лучшего понимания пока пишу на русском.
-        // Или сразу пытаться на английском писать?
-        //Оля. Сразу на английском. Я пишу на русском, чтобы мои комменты отличались от ваших и бросались в глаза.
         Directory rootDir = new Directory();
         rootDir.showDir();
 
@@ -32,7 +29,6 @@ public class Main {
 
         TextFile install = new TextFile("install", "Это контент файла", documents, 100);
         install.fileInfo();
-
 
 
     }

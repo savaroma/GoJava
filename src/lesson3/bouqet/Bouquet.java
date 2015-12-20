@@ -1,5 +1,5 @@
 package lesson3.bouqet;
 
-public class Bouquet extends Flower {// нене, отношение букет агрегирует в себе цветы, значит в классе букет должен быть, например, массив цветов
-    //наследоания у нас тут не было.
+public class Bouquet {
+    private Flower[] flowers;
 }
