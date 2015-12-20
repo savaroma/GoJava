@@ -1,4 +1,4 @@
 package lesson3.bouqet;
 
-public class RoseBush {
+public class RoseBush {//не вижу отношения куста к розе
 }
