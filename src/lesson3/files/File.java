@@ -5,26 +5,29 @@ public abstract class File {
     private String ext;
     private Integer size;
     private boolean readOnly;
-    private Directory ParentDir;//название переменной всегда с маленькой буквы (исключение - константы)
+    private Directory parentDir;
     private String content;
 
     public void setContent(String content){
         this.content = content;
-    }// между методами одна пустая строка должна быть
+    }
+
     public String getContent(){
         return content;
     }
+
     public void setName(String name){
         this.name = name;
     }
+
     public  String getName(){
         return name;
     }
 
-    public  void  setExtention(String ext){
+    public  void  setExt(String ext){
         this.ext = ext;
-    }// как правило геттеры и сеттеры используют то же имя, что и переменная, например, getExt, setExt - так легче ориентироваться
-    public String getExtention(){
+    }
+    public String getExt(){
         return ext;
     }
 
@@ -53,22 +56,29 @@ public abstract class File {
         if (this.name.equals("\\")){
             return "root Dir";
         } else {
-            return ParentDir.getName();
+            return parentDir.getName();
         }
 
     }
     public void setParentDir(Directory ParentDir){
-        this.ParentDir = ParentDir;
+        this.parentDir = ParentDir;
     }
 
-     protected void fileInfo(){// почему этот метод протекдит? есть в этом сакральный смысл?))
+
+    protected void showDir() {
         System.out.println("Directory: " + this.getParentDir());
-        System.out.println(" --- " + this.getName() + "." + this.getExtention()
-                + "( size: " + this.getSize() + " )" + "rights: " + this.isReadOnly());
     }
-    protected void dirInfo() {
-        System.out.println("Directory: " + this.getParentDir());
-    }//жублирование кода
+
+    protected void showFile() { System.out.println(" --- " + this.getName() + "." +
+            this.getExt() + "( size: " + this.getSize() + " )" + "rights: " +
+            this.isReadOnly());
+    }
+
+     public void fileInfo(){    //Спасибо, что тыкнуля сюда носом. И правда сам не догадался. Так правильнее же?
+        showDir();
+        showFile();
+    }
+    //жублирование кода
     //если ты выносишь информацию о директории в отдельный метод, тогда в методе fileInfo можно использовать этот метод, а не дублировать код.
 
  }
