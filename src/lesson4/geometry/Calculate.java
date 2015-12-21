@@ -3,19 +3,19 @@ package lesson4.geometry;
 import static java.lang.Math.*;
 
 public class Calculate {
-    private int heightOne, heightTwo, heitghThree, rectA, rectB;
+    private int heightOne, heightTwo, heightThree, rectA, rectB;
     private double radius;
 
-    public void setKatetFirst(int heightOne) {
+    public void setHeightFirst(int heightOne) {
         this.heightOne = heightOne;
     }
 
-    public void setKatetTwo(int heightTwo) {
+    public void setHeightTwo(int heightTwo) {
         this.heightTwo = heightTwo;
     }
 
-    public void setGipotenuza(int heitghThree) {
-        this.heitghThree = heitghThree;
+    public void setheightThree(int heightThree) {
+        this.heightThree = heightThree;
     }
 
     public void setRectA(int rectA) {
@@ -30,8 +30,9 @@ public class Calculate {
         this.radius = radius;
     }
 
-    public int SquareOfTriangle() {
-        return (this.heightOne + this.heightTwo + this.heitghThree)/2;
+    public double SquareOfTriangle() {
+        int p = (this.heightOne + this.heightTwo + this.heightThree)/2;
+        return sqrt(p * (p - this.heightOne) * (p - this.heightTwo) * (p - this.heightThree));
     }
 
     public double SquareOfRectangle() {

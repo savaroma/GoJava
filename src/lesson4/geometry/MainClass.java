@@ -3,9 +3,9 @@ package lesson4.geometry;
 public class MainClass {
     public static void main(String[] args) {
         Calculate figures = new Calculate();
-        figures.setKatetFirst(3);
-        figures.setKatetTwo(4);
-        figures.setGipotenuza(5);
+        figures.setHeightFirst(3);
+        figures.setHeightTwo(4);
+        figures.setheightThree(5);
         figures.setRectA(20);
         figures.setRectB(15);
         figures.setRadius(100);
