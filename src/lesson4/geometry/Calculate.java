@@ -33,6 +33,7 @@ public class Calculate {
     public double SquareOfTriangle() {
         return (double) (this.katetFirst + this.katetTwo + this.gipotenuza);
     }
+    //почему при складывании трех интов ты хочешь получить результат в дабл?
 
     public double SquareOfRectangle() {
         return (double) (this.rectA * this.rectB);

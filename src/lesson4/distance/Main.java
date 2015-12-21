@@ -1,6 +1,6 @@
 package lesson4.distance;
 
-import com.sun.org.apache.xpath.internal.SourceTree;
+import com.sun.org.apache.xpath.internal.SourceTree; //неиспользуемые импорты удаляем - мусор.
 
 public class Main {
     public static void main(String[] args) {
