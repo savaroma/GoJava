@@ -3,19 +3,19 @@ package lesson4.geometry;
 import static java.lang.Math.*;
 
 public class Calculate {
-    private int katetFirst, katetTwo, gipotenuza, rectA, rectB;
+    private int heightOne, heightTwo, heitghThree, rectA, rectB;
     private double radius;
 
-    public void setKatetFirst(int katetFirst) {
-        this.katetFirst = katetFirst;
+    public void setKatetFirst(int heightOne) {
+        this.heightOne = heightOne;
     }
 
-    public void setKatetTwo(int katetTwo) {
-        this.katetTwo = katetTwo;
+    public void setKatetTwo(int heightTwo) {
+        this.heightTwo = heightTwo;
     }
 
-    public void setGipotenuza(int gipotenuza) {
-        this.gipotenuza = gipotenuza;
+    public void setGipotenuza(int heitghThree) {
+        this.heitghThree = heitghThree;
     }
 
     public void setRectA(int rectA) {
@@ -30,10 +30,9 @@ public class Calculate {
         this.radius = radius;
     }
 
-    public double SquareOfTriangle() {
-        return (double) (this.katetFirst + this.katetTwo + this.gipotenuza);
+    public int SquareOfTriangle() {
+        return (this.heightOne + this.heightTwo + this.heitghThree)/2;
     }
-    //почему при складывании трех интов ты хочешь получить результат в дабл?
 
     public double SquareOfRectangle() {
         return (double) (this.rectA * this.rectB);
