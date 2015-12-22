@@ -2,7 +2,7 @@ package lesson4.geometry;
 
 import static java.lang.Math.*;
 
-public class Calculate {
+public class Calculator {
     private int heightOne, heightTwo, heightThree, rectA, rectB;
     private double radius;
 
@@ -14,9 +14,9 @@ public class Calculate {
         this.heightTwo = heightTwo;
     }
 
-    public void setheightThree(int heightThree) {
+    public void setHeightThree(int heightThree) {
         this.heightThree = heightThree;
-    }//смотрим на подчеркивания идеи! каждое следующее слово, кроме первого в названии метода - с большой буквы
+    }
 
     public void setRectA(int rectA) {
         this.rectA = rectA;
@@ -30,16 +30,16 @@ public class Calculate {
         this.radius = radius;
     }
 
-    public double SquareOfTriangle() { //первая буква в названии метода - маленькая. первое слово должно быть глаголом
+    public double calculateAreaOfTriangle() {
         int p = (this.heightOne + this.heightTwo + this.heightThree)/2;
         return sqrt(p * (p - this.heightOne) * (p - this.heightTwo) * (p - this.heightThree));
     }
 
-    public double SquareOfRectangle() {
+    public double calculateAreaOfRectangle() {
         return (double) (this.rectA * this.rectB);
     }
 
-    public double SquareOfCircle() {
+    public double calculateAreaOfCircle() {
         return PI * pow(this.radius, 2);
     }
 }

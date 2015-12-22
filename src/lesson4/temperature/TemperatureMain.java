@@ -1,6 +1,6 @@
 package lesson4.temperature;
 
-public class Main {
+public class TemperatureMain {
     public static void main(String[] args) {
         double celsius = 36.6;
         System.out.println("36.6 degrees of Celsius = " + Temperature.toFahrenheit(celsius) + " in Celsius");
