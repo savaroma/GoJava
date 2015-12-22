@@ -2,7 +2,7 @@ package lesson4.geometry;
 
 public class MainClass {
     public static void main(String[] args) {
-        Calculate figures = new Calculate();
+        Calculate figures = new Calculate(); //а вот класс лучше называть существительным, напр. Calculator
         figures.setHeightFirst(3);
         figures.setHeightTwo(4);
         figures.setheightThree(5);
