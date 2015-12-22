@@ -16,7 +16,7 @@ public class Calculate {
 
     public void setheightThree(int heightThree) {
         this.heightThree = heightThree;
-    }
+    }//смотрим на подчеркивания идеи! каждое следующее слово, кроме первого в названии метода - с большой буквы
 
     public void setRectA(int rectA) {
         this.rectA = rectA;
@@ -30,7 +30,7 @@ public class Calculate {
         this.radius = radius;
     }
 
-    public double SquareOfTriangle() {
+    public double SquareOfTriangle() { //первая буква в названии метода - маленькая. первое слово должно быть глаголом
         int p = (this.heightOne + this.heightTwo + this.heightThree)/2;
         return sqrt(p * (p - this.heightOne) * (p - this.heightTwo) * (p - this.heightThree));
     }
