@@ -1,12 +1,12 @@
 package lesson5.SortingAlgorithm;
 
-import java.util.Arrays;
+import java.util.Arrays; //неиспользуемые импорты за борт. Где-то в идее есть настройки, чтобы сама подчищала неиспользуемые импорты
 import java.util.Random;
 
 public class QuickSortExample {
-    public static int ARRAY_LENGTH = 30;
+    public static int ARRAY_LENGTH = 30; //все задаваемые данные лучше выносить в мейн, передавать в этот класс параметром.
     private static int[] array = new int[ARRAY_LENGTH];
-    private static Random generator = new Random();
+    private static Random generator = new Random();//можно не создавать инстанс, а вызывать статические методы этого класса на месте.
 
     public static void initArray() {
         for (int i = 0; i < ARRAY_LENGTH; i++) {
