@@ -21,7 +21,7 @@ public class QuickSortExample {
         return result;
     }
 
-    public static void quickSort(int[] array, int left, int right) {
+    private static void quickSort(int[] array, int left, int right) {
         int index = doSort(array, left, right);
         if (left < index - 1) {
             quickSort(array, left, index - 1);
