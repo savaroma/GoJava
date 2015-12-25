@@ -17,17 +17,20 @@ public class QuickSortExample {
         for (int i = 0; i < array.length - 1; i++) {
             result = result + array[i] + ", ";
         }
+
         result = result + array[array.length - 1];
         return result;
     }
 
     public static void startSort(int[] array) {
         int left = 0, right = array.length - 1;
+
         quickSort(array, left, right);
     }
 
     private static void quickSort(int[] array, int left, int right) {
         int index = doSort(array, left, right);
+
         if (left < index - 1) {
             quickSort(array, left, index - 1);
         }
@@ -38,7 +41,6 @@ public class QuickSortExample {
     }
 
     private static int doSort(int[] array, int left, int right) {
-
         int i = left;
         int j = right;
         int tmp;
