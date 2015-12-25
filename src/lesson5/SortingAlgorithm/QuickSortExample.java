@@ -23,7 +23,8 @@ public class QuickSortExample {
     }
 
     public static void startSort(int[] array) {
-        int left = 0, right = array.length - 1;
+        int left = 0;
+        int right = array.length - 1;
 
         quickSort(array, left, right);
     }
