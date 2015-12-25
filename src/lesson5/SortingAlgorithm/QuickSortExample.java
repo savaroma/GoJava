@@ -1,65 +1,61 @@
 package lesson5.SortingAlgorithm;
 
-import java.util.Arrays; //неиспользуемые импорты за борт. Где-то в идее есть настройки, чтобы сама подчищала неиспользуемые импорты
 import java.util.Random;
 
 public class QuickSortExample {
-    public static int ARRAY_LENGTH = 30; //все задаваемые данные лучше выносить в мейн, передавать в этот класс параметром.
-    private static int[] array = new int[ARRAY_LENGTH];
-    private static Random generator = new Random();//можно не создавать инстанс, а вызывать статические методы этого класса на месте.
+    private static Random generator = new Random();
 
-    public static void initArray() {
-        for (int i = 0; i < ARRAY_LENGTH; i++) {
+    public static void initArray(int array[]) {
+        for (int i = 0; i < array.length; i++) {
             array[i] = generator.nextInt(100);
         }
     }
 
-    public static String printArray() {
+    public static String printArray(int array[]) {
         String result = "";
 
-        for (int i = 0; i < ARRAY_LENGTH - 1; i++) {
+        for (int i = 0; i < array.length - 1; i++) {
             result = result + array[i] + ", ";
         }
-        result = result + array[ARRAY_LENGTH-1];
+        result = result + array[array.length - 1];
         return result;
     }
 
-    public static void quickSort() {
-        int startIndex = 0;
-        int endIndex = ARRAY_LENGTH - 1;
-        doSort(startIndex, endIndex);
-    }
-
-    private static void doSort(int start, int end) {
-        if (start >= end) {
-            return;
+    public static void quickSort(int array[], int left, int right) {
+        int index = doSort(array, left, right);
+        if (left < index - 1) {
+            quickSort(array, left, index - 1);
+        }
+        if (index < right) {
+            quickSort(array, index, right);
         }
 
-        int i = start, j = end;
-        int cur = i - (i - j) / 2;
-        while (i < j) {
-            while (i < cur && (array[i] <= array[cur])) {
+    }
+
+    private static int doSort(int array[], int left, int right) {
+
+        int i = left, j = right;
+        int tmp;
+        int pivot = array[(left + right) / 2];
+
+        while (i <= j) {
+            while (array[i] < pivot) {
                 i++;
             }
-            while (j > cur && (array[cur] <= array[j])) {
+            while (array[j] > pivot) {
                 j--;
             }
-            if (i < j) {
-                int temp = array[i];
+
+            if (i <= j) {
+                tmp = array[i];
                 array[i] = array[j];
-                array[j] = temp;
-                if (i == cur) {
-                    cur = j;
-                } else if (j == cur) {
-                    cur = i;
-                }
-
+                array[j] = tmp;
+                i++;
+                j--;
             }
-            doSort(start, cur);
-            doSort(cur + 1, end);
-
         }
-    }
 
+        return i;
+    }
 }
 

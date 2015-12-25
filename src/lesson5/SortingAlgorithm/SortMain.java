@@ -2,9 +2,10 @@ package lesson5.SortingAlgorithm;
 
 public class SortMain {
     public static void main(String[] args) {
-        QuickSortExample.initArray();
-        System.out.println(QuickSortExample.printArray());
-        QuickSortExample.quickSort();
-        System.out.println(QuickSortExample.printArray());
+    int[] array = new int[30];
+        QuickSortExample.initArray(array);
+        System.out.println(QuickSortExample.printArray(array));
+        QuickSortExample.quickSort(array, 0, array.length-1);
+        System.out.println(QuickSortExample.printArray(array));
     }
 }
