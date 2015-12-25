@@ -31,7 +31,7 @@ public class QuickSortExample {
         }
 
     }
-    public static void quickSort(int[] array) {
+    public static void startSort(int[] array) {
         int left = 0, right = array.length-1;
         int index = doSort(array, left, right);
         if (left < index - 1) {
