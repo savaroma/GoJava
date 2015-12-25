@@ -5,13 +5,13 @@ import java.util.Random;
 public class QuickSortExample {
     private static Random generator = new Random();
 
-    public static void initArray(int array[]) {
+    public static void initArray(int[] array) {
         for (int i = 0; i < array.length; i++) {
             array[i] = generator.nextInt(100);
         }
     }
 
-    public static String printArray(int array[]) {
+    public static String printArray(int[] array) {
         String result = "";
 
         for (int i = 0; i < array.length - 1; i++) {
@@ -21,7 +21,7 @@ public class QuickSortExample {
         return result;
     }
 
-    public static void quickSort(int array[], int left, int right) {
+    public static void quickSort(int[] array, int left, int right) {
         int index = doSort(array, left, right);
         if (left < index - 1) {
             quickSort(array, left, index - 1);
@@ -32,11 +32,11 @@ public class QuickSortExample {
 
     }
 
-    private static int doSort(int array[], int left, int right) {
+    private static int doSort(int[] array, int left, int right) {
 
         int i = left, j = right;
         int tmp;
-        int pivot = array[(left + right) / 2];
+        int pivot = array[left - (left - right) / 2];
 
         while (i <= j) {
             while (array[i] < pivot) {
