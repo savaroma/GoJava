@@ -21,18 +21,12 @@ public class QuickSortExample {
         return result;
     }
 
-    private static void quickSort(int[] array, int left, int right) {
-        int index = doSort(array, left, right);
-        if (left < index - 1) {
-            quickSort(array, left, index - 1);
-        }
-        if (index < right) {
-            quickSort(array, index, right);
-        }
-
-    }
     public static void startSort(int[] array) {
-        int left = 0, right = array.length-1;
+        int left = 0, right = array.length - 1;
+        quickSort(array, left, right);
+    }
+
+    private static void quickSort(int[] array, int left, int right) {
         int index = doSort(array, left, right);
         if (left < index - 1) {
             quickSort(array, left, index - 1);
@@ -45,7 +39,8 @@ public class QuickSortExample {
 
     private static int doSort(int[] array, int left, int right) {
 
-        int i = left, j = right;
+        int i = left;
+        int j = right;
         int tmp;
         int pivot = array[left - (left - right) / 2];
 
