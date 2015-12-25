@@ -5,7 +5,7 @@ public class SortMain {
     int[] array = new int[30];
         QuickSortExample.initArray(array);
         System.out.println(QuickSortExample.printArray(array));
-        QuickSortExample.quickSort(array, 0, array.length-1);
+        QuickSortExample.quickSort(array);
         System.out.println(QuickSortExample.printArray(array));
     }
 }
