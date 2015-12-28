@@ -1,12 +1,13 @@
 package lesson6.files;
 
 public class FileSizeException extends Exception {
+    private int fileSize;
 
-    public FileSizeException(String message) {
-        super(message);
+    public FileSizeException(final int fileSize){
+        this.fileSize = fileSize;
     }
 
-    public FileSizeException(String message, Exception innerEx) {
-        super(message, innerEx);
+    public int getFileSize(){
+        return fileSize;
     }
 }

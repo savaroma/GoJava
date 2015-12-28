@@ -1,7 +1,7 @@
 package lesson6.files;
 
-public class Main{
-    public static void main(String[] args) throws FileSizeException{
+public class Main {
+    public static void main(String[] args) {
 
         Directory rootDir = new Directory();
         rootDir.showDir();
@@ -30,7 +30,13 @@ public class Main{
         TextFile install = new TextFile("install", "Это контент файла", documents, 100);
         install.fileInfo();
 
-        if (sheakspeare.getSize() > 1000) throw new FileSizeException("File size out of limits. Limit 1000");
+        try {
+            if (sheakspeare.getSize() > 1000) {
+                throw new FileSizeException(sheakspeare.getSize());
+            }
+        } catch (FileSizeException e) {
+            System.out.println("[Error]: File Size is too big. Mix file size is 1000 ");
+        }
 
     }
 }
