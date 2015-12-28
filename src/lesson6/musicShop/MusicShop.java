@@ -5,7 +5,7 @@ public class MusicShop {
     private int currentIndex;
 
     public MusicShop(int shopShelfSize) {
-        if (shopShelfSize < 1) { //0 - не отрицательное число
+        if (shopShelfSize < 0) {
             throw new NegativeArraySizeException("\"Shelf size could not be negative!");
         }
         musicalInstruments = new MusicalInstrument[shopShelfSize];

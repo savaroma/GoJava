@@ -2,10 +2,10 @@ package lesson6.bouqet;
 
 public class Bouquet {
     private Flower[] flowers; //не хватает геттера хотя бы для этого поля, а то совсем не достучаться
-    public int flowersQuantity; //почему публичная переменная?
+    private int flowersQuantity; //почему публичная переменная?
 
     public Bouquet(int bouquetSize) {
-        if (bouquetSize < 1) { //0 - это не отрицательное число
+        if (bouquetSize < 0) {
             throw new NegativeArraySizeException("Bouquet should contain at least one flower!");
         }
 

@@ -12,11 +12,7 @@ public abstract class File {
         this.content = content;
     }
 
-    public String getContent() {
-        return content;
-    }
-
-    public void setName(String name) {
+   public void setName(String name) {
         this.name = name;
     }
 
@@ -44,11 +40,7 @@ public abstract class File {
         this.readOnly = readOnly;
     }
 
-    public Boolean getReadOnly() {
-        return readOnly;
-    }
-
-    public String ReadOnlyStr() { //название метода с маленькой буквы
+    public String readOnlyStr() {
         if (this.readOnly) {
             return "read only";
         } else {
@@ -69,18 +61,14 @@ public abstract class File {
         this.parentDir = ParentDir;
     }
 
-    public void serParentDir() { //если метод не вызывается - это мертвый код, удалить. Или вызвать))
-        this.parentDir.setName("root");
-    }
-
-    protected void showDir() {
+   protected void showDir() {
         System.out.println("Directory: " + this.getParentDir());
     }
 
     protected void showFile() {
         System.out.println(" --- " + this.getName() + "." +
                 this.getExt() + "( size: " + this.getSize() + " )" + "rights: " +
-                this.ReadOnlyStr());
+                this.readOnlyStr());
     }
 
     public void fileInfo() {
