@@ -1,6 +1,6 @@
 package lesson6.musicShop;
 
-import sun.awt.image.GifImageDecoder;
+import sun.awt.image.GifImageDecoder; //мертвый импорт - за борт
 
 public class Main {
     public static void main(String[] args) {

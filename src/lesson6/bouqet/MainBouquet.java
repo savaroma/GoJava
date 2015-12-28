@@ -16,7 +16,7 @@ public class MainBouquet {
 
         try {
             Bouquet bouquet = new Bouquet(5);
-            System.out.println("There was exception!");
+            System.out.println("There was exception!"); //месседж не верный, эта строка выполнится, если эксепшена не будет.
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }

@@ -35,7 +35,7 @@ public class Main {
                 throw new FileSizeException(sheakspeare.getSize());
             }
         } catch (FileSizeException e) {
-            System.out.println("[Error]: File Size is too big. Mix file size is 1000 ");
+            System.out.println("[Error]: File Size is too big. Mix file size is 1000 "); //Mix file?)))
         }
 
     }

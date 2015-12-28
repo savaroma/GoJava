@@ -10,4 +10,7 @@ public class FileSizeException extends Exception {
     public int getFileSize(){
         return fileSize;
     }
+
+    //эксепшен как правило возвращает месседж об исключительной ситуации, но не данные
+    //размер файла может отдавать только класс File
 }
