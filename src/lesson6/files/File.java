@@ -26,7 +26,7 @@ public abstract class File {
 
     public void setExt(String ext) {
         this.ext = ext;
-    }// все еще не между всеми методами есть пустая строка
+    }
 
     public String getExt() {
         return ext;
@@ -81,7 +81,7 @@ public abstract class File {
         System.out.println(" --- " + this.getName() + "." +
                 this.getExt() + "( size: " + this.getSize() + " )" + "rights: " +
                 this.ReadOnlyStr());
-    } //Для того, чтобы выровнить все отступы, попробуй нажать комбинацию Ctrl+Alt+L
+    }
 
     public void fileInfo() {
         showDir();

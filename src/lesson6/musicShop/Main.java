@@ -11,11 +11,11 @@ public class Main {
         Piano piano = new Piano();
         Trumpet trumpet = new Trumpet();
 
-        try{
+        try {
             shop.addMusicalInstrument(guitar);
             shop.addMusicalInstrument(piano);
             shop.addMusicalInstrument(trumpet);
-        } catch (RuntimeException e){
+        } catch (RuntimeException e) {
             System.out.println("[Exception]: " + e.getMessage());
         }
 

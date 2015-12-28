@@ -1,7 +1,7 @@
 package lesson6.files;
 
-public class Main {
-    public static void main(String[] args) {
+public class Main{
+    public static void main(String[] args) throws FileSizeException{
 
         Directory rootDir = new Directory();
         rootDir.showDir();
@@ -30,6 +30,7 @@ public class Main {
         TextFile install = new TextFile("install", "Это контент файла", documents, 100);
         install.fileInfo();
 
+        if (sheakspeare.getSize() > 1000) throw new FileSizeException("File size out of limits. Limit 1000");
 
     }
 }
