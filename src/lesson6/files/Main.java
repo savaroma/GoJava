@@ -1,6 +1,7 @@
 package lesson6.files;
 
 public class Main {
+    public static int MAX_FILE_SIZE = 1000;
     public static void main(String[] args) {
 
         Directory rootDir = new Directory();
@@ -32,10 +33,10 @@ public class Main {
 
         try {
             if (shakespeare.getSize() > 1000) {
-                throw new FileSizeException(shakespeare.getSize());
+                throw new FileSizeException(shakespeare);
             }
         } catch (FileSizeException e) {
-            System.out.println("[Error]: File Size is too big. Max file size is 1000 ");
+            System.out.println("[Error]: File Size is too big. Max file size is " + MAX_FILE_SIZE);
         }
 
     }

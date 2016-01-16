@@ -1,14 +1,14 @@
 package lesson6.files;
 
 public class FileSizeException extends Exception {
-    private int fileSize;
+    File file;
 
-    public FileSizeException(final int fileSize){
-        this.fileSize = fileSize;
+    public FileSizeException(final File file){
+        this.file = file;
     }
 
     public int getFileSize(){
-        return fileSize;
+        return file.getSize();
     }
 
     //эксепшен как правило возвращает месседж об исключительной ситуации, но не данные
