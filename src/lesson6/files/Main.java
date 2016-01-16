@@ -12,8 +12,8 @@ public class Main {
         Directory musicDir = new Directory("Music", rootDir);
         musicDir.showDir();
 
-        AudioFile sheakspeare = new AudioFile("sonata-5", musicDir, 1024000, true);
-        sheakspeare.fileInfo();
+        AudioFile shakespeare = new AudioFile("sonata-5", musicDir, 1024000, true);
+        shakespeare.fileInfo();
 
         TextFile readme = new TextFile("readme", musicDir);
         readme.fileInfo();
@@ -31,8 +31,8 @@ public class Main {
         install.fileInfo();
 
         try {
-            if (sheakspeare.getSize() > 1000) {
-                throw new FileSizeException(sheakspeare.getSize());
+            if (shakespeare.getSize() > 1000) {
+                throw new FileSizeException(shakespeare.getSize());
             }
         } catch (FileSizeException e) {
             System.out.println("[Error]: File Size is too big. Max file size is 1000 ");

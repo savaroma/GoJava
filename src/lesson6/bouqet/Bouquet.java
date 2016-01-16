@@ -1,8 +1,7 @@
 package lesson6.bouqet;
 
 public class Bouquet {
-    private Flower[] flowers; //не хватает геттера хотя бы для этого поля, а то совсем не достучаться
-    private int flowersQuantity; //почему публичная переменная?
+    private static Flower[] flowers;
 
     public Bouquet(int bouquetSize) {
         if (bouquetSize < 0) {
@@ -14,6 +13,10 @@ public class Bouquet {
         }
 
         flowers = new Flower[bouquetSize];
-        flowersQuantity = 0; //ну и к чему этот ноль?))
     }
+
+    public static Flower[] getFlowers() {
+        return flowers;
+    }
+
 }

@@ -81,7 +81,7 @@ public abstract class File {
         System.out.println(" --- " + this.getName() + "." +
                 this.getExt() + "( size: " + this.getSize() + " )" + "rights: " +
                 this.ReadOnlyStr());
-    } //Для того, чтобы выровнить все отступы, попробуй нажать комбинацию Ctrl+Alt+L
+    }
 
     public void fileInfo() {
         showDir();
