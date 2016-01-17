@@ -1,7 +1,10 @@
 package lesson6.bouqet;
 
+import lesson3.bouqet.*;
+
 public class MainBouquet {
     public static void main(String[] args) {
+
         try {
             Bouquet bouquet = new Bouquet(-1);
         } catch (NegativeArraySizeException e) {
@@ -16,7 +19,7 @@ public class MainBouquet {
 
         try {
             Bouquet bouquet = new Bouquet(5);
-            System.out.println("It is not an exception");
+            System.out.println("It is not an exception.");
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }

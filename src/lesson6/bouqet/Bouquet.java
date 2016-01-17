@@ -1,7 +1,9 @@
 package lesson6.bouqet;
 
 public class Bouquet {
-    private static Flower[] flowers;
+    public static int INIT_QUANTITY = 0;
+    private Flower[] flowers;
+    private int flowersQuantity;
 
     public Bouquet(int bouquetSize) {
         if (bouquetSize < 0) {
@@ -13,10 +15,22 @@ public class Bouquet {
         }
 
         flowers = new Flower[bouquetSize];
+        flowersQuantity = INIT_QUANTITY;
     }
 
-    public static Flower[] getFlowers() {
+    public int getFlowersQuantity() {
+        return flowersQuantity;
+    }
+
+    public void setFlowersQuantity(int flowersQuantity) {
+        this.flowersQuantity = flowersQuantity;
+    }
+
+    public Flower[] getFlowers() {
         return flowers;
     }
 
+    public void setFlowers(Flower[] flowers) {
+        this.flowers = flowers;
+    }
 }
