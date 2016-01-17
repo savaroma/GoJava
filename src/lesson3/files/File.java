@@ -1,6 +1,9 @@
 package lesson3.files;
 
 public abstract class File {
+    public static final int INIT_SIZE = 0; //Anti pattern "hard coding" extracted to CONST
+    public static final String UNNAMED_FILE = "Unnamed"; //Anti pattern "hard coding" extracted to CONST
+    public static final String INIT_EMPTY_CONTENT = ""; // Anti pattern hard coding Unnamed file name extracted
     private String name;
     private String ext;
     private Integer size;
@@ -26,7 +29,7 @@ public abstract class File {
 
     public void setExt(String ext) {
         this.ext = ext;
-    }// все еще не между всеми методами есть пустая строка
+    }
 
     public String getExt() {
         return ext;
@@ -48,7 +51,7 @@ public abstract class File {
         return readOnly;
     }
 
-    public String ReadOnlyStr() { //название метода с маленькой буквы
+    public String readOnlyStr() {
         if (this.readOnly) {
             return "read only";
         } else {
@@ -80,7 +83,7 @@ public abstract class File {
     protected void showFile() {
         System.out.println(" --- " + this.getName() + "." +
                 this.getExt() + "( size: " + this.getSize() + " )" + "rights: " +
-                this.ReadOnlyStr());
+                this.readOnlyStr());
     }
 
     public void fileInfo() {
