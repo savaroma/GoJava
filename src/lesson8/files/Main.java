@@ -4,7 +4,6 @@ public class Main {
     public static void main(String[] args) {
 
         Directory rootDir = new Directory();
-        rootDir.showDir();
 
         rootDir.addFile(new TextFile("dontReadme"));
 
@@ -13,20 +12,22 @@ public class Main {
 
         musicDir.addFile(new AudioFile("sonata-5", musicDir, 1024000, true));
 
-        Directory textDir = new Directory("TextFolder", rootDir);
+        Directory textDir = new Directory("TextDir");
+        rootDir.addFile(textDir);
         textDir.addFile(new TextFile("readme", musicDir));
 
-        Directory picturesDir = new Directory("Pictures", rootDir);
-        picturesDir.showDir();
+        Directory picturesDir = new Directory("Pictures");
+        rootDir.addFile(picturesDir);
 
-        TextFile readmeFirst = new TextFile("readmeFirst", picturesDir);
-        readmeFirst.fileInfo();
+        picturesDir.addFile(new TextFile("readmeThird"));
+        picturesDir.addFile(new TextFile("readmeFirst"));
+        picturesDir.addFile(new TextFile("readmeSecond"));
 
-        Directory documents = new Directory("Documents", rootDir);
-        documents.showDir();
+        Directory documentsDir = new Directory("Documents");
+        textDir.addFile(documentsDir);
 
-        TextFile install = new TextFile("install", "Это контент файла", documents, 100);
-        install.fileInfo();
+        documentsDir.addFile(new TextFile("install", "Это контент файла", 100));
+
         rootDir.dir();
         System.out.println();
 
@@ -36,10 +37,10 @@ public class Main {
         musicDir.dir();
         System.out.println();
 
-        musicDir.dirSortedByName();
+        picturesDir.dir();
         System.out.println();
 
-        picturesDir.dir();
+        picturesDir.dirSortedByName();
         System.out.println();
 
 
