@@ -86,7 +86,7 @@ public abstract class File {
                 this.readOnlyStr());
     }
 
-    public void fileInfo() {
+    public void fileInfo() { // неиспользуемый метод
         showDir();
         showFile();
     }

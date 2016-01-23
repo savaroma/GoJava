@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 public class RoseBush {
     Flower[] flowers = {};
-    ArrayList<Flower> flowersList;
+    ArrayList<Flower> flowersList; //Используйте полиморфизм, где это возможно, напр. List<Rose> list = new ArrayList<>;
 
     public RoseBush() {
         this.flowersList = new ArrayList<>(Arrays.asList(flowers));
@@ -24,4 +24,4 @@ public class RoseBush {
             System.out.println("Rosebush not contains Roses");
         }
     }
-}
+} //Логика хромает. Куст должен содержать розы, а не цветы.

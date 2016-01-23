@@ -1,6 +1,6 @@
 package lesson8.files;
 
-import com.sun.org.apache.xpath.internal.SourceTree;
+import com.sun.org.apache.xpath.internal.SourceTree; //подчищаем неиспользованные импорты
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -32,7 +32,7 @@ public class Directory extends File {
         filesList.add(file);
     }
 
-    public void dir() {
+    public void dir() { //название метода ни о чем, где глагол?
         System.out.println(super.getName() + " /");
         filesList
                 .forEach(System.out::println);
