@@ -32,7 +32,7 @@ public class Main {
         install.fileInfo();
 
         try {
-            if (shakespeare.getSize() > 1000) { //а в этой строке использовать константу вместо меджик намбер?
+            if (shakespeare.getSize() > MAX_FILE_SIZE) {
                 throw new FileSizeException(shakespeare);
             }
         } catch (FileSizeException e) {
