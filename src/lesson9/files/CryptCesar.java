@@ -28,9 +28,9 @@ public class CryptCesar {
         }
     }
 
-    public String encrypt(String text, int m, int k) {
+    public String encrypt(String text, int m, int k) { //ой, а что такое m  и что такое k?
         int n = alphabet.size();
-        m = m % n;
+        m = m % n; //очень лаконично)), но ничего не понятно
         k = k % n;
         if (greatestCommonDivider(n, m) != 1) {// check relative simplicity n m
             return null;

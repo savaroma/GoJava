@@ -1,6 +1,8 @@
 package lesson9.files;
 
 public class ImageFile extends File {
+    //Думаю, для задач, где надо использовать классы с предыдущих задач, стоит брать только то, что используется в этой задаче.
+    //То есть все якоря (классы, методы) выбрасываем.
     private static String fileType = "img";
 
     public ImageFile() {

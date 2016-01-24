@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import java.util.Comparator;
 
 public class Directory extends File {
-    ArrayList<File> filesList;
+    ArrayList<File> filesList; //Полиморфизм List<>
+    //И что это за фамильярный доступ к списку?)) Давай инкапсуляцию и геттер
     Comparator<File> byFileName;
 
     public Directory() {
@@ -30,7 +31,7 @@ public class Directory extends File {
         filesList.add(file);
     }
 
-    public void dir() {
+    public void dir() {//тут не хватило сил переименовать?)))
         System.out.println(super.getName() + " /");
         filesList
                 .forEach(System.out::println);

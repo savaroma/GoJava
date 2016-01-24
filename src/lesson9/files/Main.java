@@ -2,7 +2,9 @@ package lesson9.files;
 
 public class Main {
     public static void main(String[] args) {
-        String contentForEncrypt;
+        String contentForEncrypt; //Снова у кого-то другого плохому научился)))
+        //Не нужно объявление переменной писать отдельно от присваивания ей значения, если это происходит в одном
+        //методе и без всяких блоков.
         String encryptedFile;
         String decryptedContent;
 
@@ -47,6 +49,8 @@ public class Main {
         System.out.println();
 
         contentForEncrypt = documentsDir.filesList.get(0).getContent();
+        //не хорошо так нагло обращаться к переменной другого класса, надо через геттер, который ты сделаешь
+        //И еще паровозы - тоже не гуд. Нарушается закон Деметры - гуглим
         System.out.println("Content for encrypting by Cesar method (en-ru): " + contentForEncrypt);
         CryptCesar cesar = new CryptCesar();
         encryptedFile = cesar.encrypt(contentForEncrypt,1,15);

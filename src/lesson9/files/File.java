@@ -75,6 +75,7 @@ public abstract class File {
     public void serParentDir() { //если метод не вызывается - это мертвый код, удалить. Или вызвать))
         this.parentDir.setName("root");
     }
+    //Это что такое?))) сэр парент дир?))))  И зачем нам неиспользуемые методы?
 
     protected void showDir() {
         System.out.println("Directory: " + this.getParentDir());
