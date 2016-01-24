@@ -1,11 +1,5 @@
 package lesson9.files;
 
-import java.util.ArrayList;
-import java.util.List;
-
-//En(x) = x + n mod 26
-//Dn(x) = x - n mod 26
-//x = letter; n = shift of letter
 public class CesarMyRealization {
     private static final String alphabet = "abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     private static final String codedAlphabet = "bvgqkmnadzcwseoyfjxhtlpuir BVGQKMNADZCWSEOYFJXHTLPUIR";

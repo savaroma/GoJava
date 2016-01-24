@@ -8,7 +8,6 @@ public abstract class File {
     private String ext;
     private Integer size;
     private boolean readOnly;
-    private Directory parentDir;
     private String content;
 
     public void setContent(String content) {
@@ -31,10 +30,6 @@ public abstract class File {
         this.ext = ext;
     }
 
-    public String getExt() {
-        return ext;
-    }
-
     public void setSize(Integer size) {
         this.size = size;
     }
@@ -51,44 +46,7 @@ public abstract class File {
         return readOnly;
     }
 
-    public String readOnlyStr() {
-        if (this.readOnly) {
-            return "read only";
-        } else {
-            return "writable";
-        }
-    }
-
-    public String getParentDir() {
-        if (this.name.equals("\\")) {
-            return "root";
-        } else {
-            return parentDir.getName();
-        }
-
-    }
-
     public void setParentDir(Directory ParentDir) {
-        this.parentDir = ParentDir;
-    }
-
-    public void serParentDir() { //если метод не вызывается - это мертвый код, удалить. Или вызвать))
-        this.parentDir.setName("root");
-    }
-
-    protected void showDir() {
-        System.out.println("Directory: " + this.getParentDir());
-    }
-
-    protected void showFile() {
-        System.out.println(" --- " + this.getName() + "." +
-                this.getExt() + "( size: " + this.getSize() + " )" + "rights: " +
-                this.readOnlyStr());
-    }
-
-    public void fileInfo() { // неиспользуемый метод
-        showDir();
-        showFile();
     }
 
     @Override

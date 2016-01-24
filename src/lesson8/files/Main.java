@@ -28,16 +28,16 @@ public class Main {
 
         documentsDir.addFile(new TextFile("install", "Это контент файла", 100));
 
-        rootDir.dir();
+        rootDir.getDirectoryInfo();
         System.out.println();
 
         rootDir.dirSortedByName();
         System.out.println();
 
-        musicDir.dir();
+        musicDir.getDirectoryInfo();
         System.out.println();
 
-        picturesDir.dir();
+        picturesDir.getDirectoryInfo();
         System.out.println();
 
         picturesDir.dirSortedByName();

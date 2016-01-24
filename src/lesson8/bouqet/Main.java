@@ -13,18 +13,18 @@ public class Main {
         bouquet.addFlower(new Rose(COLOR_RED,WITH_SPIKE));
         bouquet.addFlower(new Aster(COLOR_WHITE));
         bouquet.addFlower(new Tulip(COLOR_YELLOW));
-        bouquet.info();
+        bouquet.getInfo();
         System.out.println();
 
         bouquet.removeFlower();
         bouquet.removeFlower();
-        bouquet.info();
+        bouquet.getInfo();
         System.out.println();
 
         RoseBush rosebush = new RoseBush();
-        rosebush.include(new Rose(COLOR_WHITE,WITHOUT_SPIKE));
-        rosebush.include(new Rose(COLOR_WHITE,WITHOUT_SPIKE));
-        rosebush.include(new Rose(COLOR_WHITE,WITHOUT_SPIKE));
-        rosebush.info();
+        rosebush.includeRose(new Rose(COLOR_WHITE,WITHOUT_SPIKE));
+        rosebush.includeRose(new Rose(COLOR_RED,WITH_SPIKE));
+        rosebush.includeRose(new Rose(COLOR_WHITE,WITHOUT_SPIKE));
+        rosebush.getInfo();
     }
 }
