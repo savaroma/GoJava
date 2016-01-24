@@ -36,15 +36,15 @@ public class CryptCesar {
             return null;
         }
 
-        StringBuilder cryptogramm = new StringBuilder();
+        StringBuilder cryptogram = new StringBuilder();
         // block of encoding data
         for (int i = 0; i < text.length(); i++) {
             char c = text.charAt(i);
             int index = alphabet.indexOf(c);
             index = (index * m + k) % n;
-            cryptogramm.append(alphabet.get(index));
+            cryptogram.append(alphabet.get(index));
         }
-        return cryptogramm.toString();
+        return cryptogram.toString();
     }
 
     public String decrypt(String text, int m, int k) {
