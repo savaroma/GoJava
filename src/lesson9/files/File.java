@@ -1,15 +1,15 @@
 package lesson9.files;
 
 public abstract class File {
-    public static final int INIT_SIZE = 0; //Anti pattern "hard coding" extracted to CONST
-    public static final String UNNAMED_FILE = "Unnamed"; //Anti pattern "hard coding" extracted to CONST
-    public static final String INIT_EMPTY_CONTENT = "empty"; // Anti pattern hard coding Unnamed file name extracted
+    public static final int INIT_SIZE = 0;
+    public static final String UNNAMED_FILE = "Unnamed";
+    public static final String INIT_EMPTY_CONTENT = "empty";
     private String name;
     private String ext;
     private Integer size;
     private boolean readOnly;
-    private Directory parentDir;
     private String content;
+    private Directory parentDir;
 
     public void setContent(String content) {
         this.content = content;
@@ -31,9 +31,6 @@ public abstract class File {
         this.ext = ext;
     }
 
-    public String getExt() {
-        return ext;
-    }
 
     public void setSize(Integer size) {
         this.size = size;
@@ -51,51 +48,24 @@ public abstract class File {
         return readOnly;
     }
 
-    public String readOnlyStr() {
-        if (this.readOnly) {
-            return "read only";
-        } else {
-            return "writable";
-        }
-    }
-
-    public String getParentDir() {
-        if (this.name.equals("\\")) {
-            return "root";
-        } else {
-            return parentDir.getName();
-        }
-
-    }
-
     public void setParentDir(Directory ParentDir) {
         this.parentDir = ParentDir;
     }
 
-    public void serParentDir() { //если метод не вызывается - это мертвый код, удалить. Или вызвать))
-        this.parentDir.setName("root");
-    }
-    //Это что такое?))) сэр парент дир?))))  И зачем нам неиспользуемые методы?
-
-    protected void showDir() {
-        System.out.println("Directory: " + this.getParentDir());
-    }
-
-    protected void showFile() {
-        System.out.println(" --- " + this.getName() + "." +
-                this.getExt() + "( size: " + this.getSize() + " )" + "rights: " +
-                this.readOnlyStr());
-    }
-
-    public String readFile() {
-        return name + " = " + content;
+    public void setRootDir(Directory root) {
+        this.parentDir = root;
     }
 
     @Override
-    public String toString(){
-        return "    type= '" + ext + '\'' +
-                "name = '" + name + '\'' +
-                "size = '" + size + '\'' +
-                "readOnly = '" + readOnly + '\'';
+    public String toString() {
+        return "    type= '" + ext + "\' " +
+                "name = '" + name + "\' " +
+                "size = '" + size + "\' " +
+                "content = '" + content + "\' " +
+                "readOnly = '" + readOnly + "\' ";
+    }
+
+    public Directory getParentDir() {
+        return this.parentDir;
     }
 }

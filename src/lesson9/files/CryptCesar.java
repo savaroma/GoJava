@@ -28,12 +28,11 @@ public class CryptCesar {
         }
     }
 
-    public String encrypt(String text, int m, int k) { //ой, а что такое m  и что такое k?
+    public String encrypt(String text, int shift) {
         int n = alphabet.size();
-        m = m % n; //очень лаконично)), но ничего не понятно
-        k = k % n;
-        if (greatestCommonDivider(n, m) != 1) {// check relative simplicity n m
-            return null;
+        shift = shift % n;
+        if (shift > n) {
+            shift = shift % n;
         }
 
         StringBuilder cryptogram = new StringBuilder();
@@ -41,20 +40,19 @@ public class CryptCesar {
         for (int i = 0; i < text.length(); i++) {
             char c = text.charAt(i);
             int index = alphabet.indexOf(c);
-            index = (index * m + k) % n;
+            index = (index + shift) % n;
             cryptogram.append(alphabet.get(index));
         }
         return cryptogram.toString();
     }
 
-    public String decrypt(String text, int m, int k) {
+    public String decrypt(String text, int shift) {
         int n = alphabet.size();
-        m = m % k;
-        k = k % n;
+        shift = shift % n;
         int reversedM = -1;
         //find reversed m
         for (int i = 0; i < n; i++) {
-            if ((i * m) % n == 1) {
+            if (i % n == 1) {
                 reversedM = i;
                 break;
             }
@@ -64,23 +62,11 @@ public class CryptCesar {
         for (int i = 0; i < text.length(); i++) {
             char c = text.charAt(i);
             int index = alphabet.indexOf(c);
-            index = (((index - k) * reversedM) % n + n) % n;
+            index = (((index - shift) * reversedM) % n + n) % n;
             newText.append(alphabet.get(index));
         }
         return newText.toString();
 
-    }
-
-    //algorithm for finding the greatest common divider
-    private static int greatestCommonDivider(int a, int b) {
-        while (a > 0 && b > 0) {
-            if (a > b) {
-                a %= b;
-            } else {
-                b %= a;
-            }
-        }
-        return a + b;
     }
 }
 

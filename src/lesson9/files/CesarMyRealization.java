@@ -1,6 +1,6 @@
 package lesson9.files;
 
-public class CesarMyRealization {
+public class CesarMyRealization { //Enigma method of encoding
     private static final String alphabet = "abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     private static final String codedAlphabet = "bvgqkmnadzcwseoyfjxhtlpuir BVGQKMNADZCWSEOYFJXHTLPUIR";
 
