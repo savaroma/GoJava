@@ -4,8 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Directory extends File {
-    List<File> filesList = new ArrayList<>(); //в прошлом комменте спросила, почему есть доступ к этому списку? где инкапсуляция?
-    //необходимо сделать его private и если понадобится - создать геттер на весь лист.
+    private List<File> filesList = new ArrayList<>();
 
     public Directory() {
         super.setName("root");

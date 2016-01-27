@@ -32,7 +32,7 @@ public class Directory extends File {
         filesList.add(file);
     }
 
-    public void getDirectoryInfo() { //название метода ни о чем, где глагол?
+    public void getDirectoryInfo() {
         System.out.println(super.getName() + " /");
         filesList
                 .forEach(System.out::println);

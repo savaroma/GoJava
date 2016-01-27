@@ -17,10 +17,10 @@ public class Main {
 
         CryptCesar cesar = new CryptCesar();
 
-        String encryptedFile = cesar.encrypt(contentForEncrypt, 10);
+        String encryptedFile = cesar.encrypt(contentForEncrypt, 7);
         System.out.println("Encrypted content by Cesar method (en-ru): " + encryptedFile);
 
-        String decryptedContent = cesar.decrypt(encryptedFile, 10);
+        String decryptedContent = cesar.decrypt(encryptedFile, 7);
         System.out.println("Content after decryption by Cesar method (en-ru): " + decryptedContent);
 
         contentForEncrypt = rootDir.getFileName(0);

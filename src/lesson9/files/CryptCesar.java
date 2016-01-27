@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CryptCesar {
-    List<Character> alphabet = new ArrayList<>();
+    private List<Character> alphabet = new ArrayList<>();
     private final static char[] PUNCTUATION = {' ', '.', ',', ';', ':', '!', '?', '-', '_'};
 
     CryptCesar() {
@@ -30,7 +30,6 @@ public class CryptCesar {
 
     public String encrypt(String text, int shift) {
         int n = alphabet.size();
-        shift = shift % n;
         if (shift > n) {
             shift = shift % n;
         }
