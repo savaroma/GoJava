@@ -3,11 +3,10 @@
 
 package lesson10.files;
 
-import java.io.IOException;
 import java.util.ArrayList;
 
 public class Main {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         Directory rootDir = new Directory();
         ArrayList<String> text = new ArrayList<>();
 
