@@ -39,10 +39,10 @@ public class Main {
 
         decryptedContent = cesar2.decrypt(encryptedFile);
         text.add("Content after decryption by Enigma method (only english): " + decryptedContent);
-
+        ArrayList<String> readText = FileInputOutput.readFromFile("readme.txt");
         FileInputOutput.writeToFile("readme.txt", text);
 
-        ArrayList<String> readText = FileInputOutput.readFromFile("readme.txt");
+
 
         readText.forEach(System.out::println);
 
