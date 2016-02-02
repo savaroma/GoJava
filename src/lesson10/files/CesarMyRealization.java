@@ -23,5 +23,4 @@ public class CesarMyRealization { //Enigma method of encoding
         }
         return decodedText.toString();
     }
-
 }
