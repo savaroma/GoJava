@@ -40,6 +40,9 @@ public class Main {
         decryptedContent = cesar2.decrypt(encryptedFile);
         text.add("Content after decryption by Enigma method (only english): " + decryptedContent);
         ArrayList<String> readText = FileInputOutput.readFromFile("readme.txt");
+        // при попытке чтения из файла возникает ошибка
+        //Error: File not found: readme.txt (Не удается найти указанный файл)
+
         FileInputOutput.writeToFile("readme.txt", text);
 
 

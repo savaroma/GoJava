@@ -1,7 +1,7 @@
 package lesson4.geometry;
 
 import org.junit.Before;
-import org.junit.BeforeClass;
+import org.junit.BeforeClass;  //мертвый код
 import org.junit.Test;
 import org.junit.Assert;
 
@@ -15,7 +15,7 @@ public class CalculatorTest {
         figures.setHeightFirst(3);
         figures.setHeightTwo(4);
         figures.setHeightThree(5);
-        figures.setRectA(20);
+        figures.setRectA(20);//зачем в каждом тесте устанавливать параметры, которые не применяешь в данном тесте?
         figures.setRectB(15);
         figures.setRadius(100);
 

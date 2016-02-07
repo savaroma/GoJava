@@ -15,7 +15,8 @@ public class FileInputOutputTest {
         text.add("testWrite1");
         text.add("testWrite2");
 
-        FileInputOutput.writeToFile("readmeTestWriteToFile.txt", text);
+        FileInputOutput.writeToFile("readmeTestWriteToFile.txt", text); //не логично записывать в один файл, а потом
+        //проверять запись из другого файла. Этот тест не понятно, что тестирует?
 
         Assert.assertArrayEquals(text.toArray(), readFromFile("readmeTestWriteToFileEthalone.txt").toArray());
 

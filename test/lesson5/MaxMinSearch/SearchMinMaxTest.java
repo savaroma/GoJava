@@ -3,7 +3,7 @@ package lesson5.MaxMinSearch;
 import org.junit.Assert;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.*; //мертвый код
 
 public class SearchMinMaxTest {
     SearchMinMax search = new SearchMinMax();

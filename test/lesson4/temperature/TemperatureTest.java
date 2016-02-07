@@ -3,7 +3,7 @@ package lesson4.temperature;
 import org.junit.Assert;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.*; //мертвый код
 
 public class TemperatureTest {
     private static final double DELTA = 1e-15;

@@ -3,7 +3,7 @@ package lesson5.SortingAlgorithm;
 import org.junit.Assert;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.*; //ну ты понял, что это надо удалить во всех тестах?))
 
 public class QuickSortExampleTest {
     int[] list = {5, 6, 7, 8, 1, 2, 5, -7, -9, 2, 0};
