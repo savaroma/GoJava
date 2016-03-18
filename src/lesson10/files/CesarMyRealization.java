@@ -1,5 +1,8 @@
 package lesson10.files;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class CesarMyRealization { //Enigma method of encoding
     private static final String alphabet = "abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     private static final String codedAlphabet = "bvgqkmnadzcwseoyfjxhtlpuir BVGQKMNADZCWSEOYFJXHTLPUIR";
@@ -12,6 +15,7 @@ public class CesarMyRealization { //Enigma method of encoding
             encodedText.append(codedAlphabet.charAt(index));
         }
         return encodedText.toString();
+
     }
 
     public String decrypt(String text) {
@@ -23,4 +27,6 @@ public class CesarMyRealization { //Enigma method of encoding
         }
         return decodedText.toString();
     }
+
+    Map<Character, Integer> abc = new HashMap<>();
 }

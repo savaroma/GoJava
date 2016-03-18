@@ -1,9 +1,6 @@
 package lesson8.bouqet;
 
-import lesson3.bouqet.*;
-
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class RoseBush {
