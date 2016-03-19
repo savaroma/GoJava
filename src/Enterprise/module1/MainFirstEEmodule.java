@@ -2,9 +2,9 @@ package Enterprise.module1;
 
 public class MainFirstEEmodule {
     static final int NUMBER_OF_TESTS = 10;
-    static final int NUM10K = 10000;
-    static final int NUM100K = 100000;
-    static final int NUM1000K = 1000000;
+    private static final int NUM10K = 10000;
+    private static final int NUM100K = 100000;
+    private static final int NUM1000K = 1000000;
     static long[] temp = new long[7];
 
     public static void main(String[] args) {
