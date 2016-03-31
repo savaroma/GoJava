@@ -1,16 +1,16 @@
 package Enterprise.module1;
 
-public class MainFirstEEmodule {//Идея даже подчеркивает, последнее слово в имени класса надо с большой буквы - тогда это будет
-    //кемел-кейс
-    static final int NUMBER_OF_TESTS = 10; //делать переменную статической, но в то же время ограниченной областью видимости -
-    //не паблик - нужны основания)) Константы всегда public static final
+public class MainFirstEEmodule {//РРґРµСЏ РґР°Р¶Рµ РїРѕРґС‡РµСЂРєРёРІР°РµС‚, РїРѕСЃР»РµРґРЅРµРµ СЃР»РѕРІРѕ РІ РёРјРµРЅРё РєР»Р°СЃСЃР° РЅР°РґРѕ СЃ Р±РѕР»СЊС€РѕР№ Р±СѓРєРІС‹ - С‚РѕРіРґР° СЌС‚Рѕ Р±СѓРґРµС‚
+    //РєРµРјРµР»-РєРµР№СЃ
+    static final int NUMBER_OF_TESTS = 10; //РґРµР»Р°С‚СЊ РїРµСЂРµРјРµРЅРЅСѓСЋ СЃС‚Р°С‚РёС‡РµСЃРєРѕР№, РЅРѕ РІ С‚Рѕ Р¶Рµ РІСЂРµРјСЏ РѕРіСЂР°РЅРёС‡РµРЅРЅРѕР№ РѕР±Р»Р°СЃС‚СЊСЋ РІРёРґРёРјРѕСЃС‚Рё -
+    //РЅРµ РїР°Р±Р»РёРє - РЅСѓР¶РЅС‹ РѕСЃРЅРѕРІР°РЅРёСЏ)) РљРѕРЅСЃС‚Р°РЅС‚С‹ РІСЃРµРіРґР° public static final
     private static final int NUM10K = 10000;
     private static final int NUM100K = 100000;
     private static final int NUM1000K = 1000000;
     static long[] temp = new long[7];
 
     public static void main(String[] args) {
-        long[] resArray = new long[7]; // 7 и 4 - меджик намберс
+        long[] resArray = new long[7]; // 7 Рё 4 - РјРµРґР¶РёРє РЅР°РјР±РµСЂСЃ
         long[] resLinked = new long[7];
         long[] resTree = new long[4];
         long[] resHash = new long[4];

@@ -5,15 +5,15 @@ import java.util.List;
 import java.util.ListIterator;
 import java.util.Random;
 
-class LinkedListMeasurements extends MainFirstEEmodule { //наследование от мейна - ну очень странная штука
-    //мейн - это всегда отдельный класс, который отвечает только за запуск программы. Считай, что это сторона клиента.
+class LinkedListMeasurements extends MainFirstEEmodule { //РЅР°СЃР»РµРґРѕРІР°РЅРёРµ РѕС‚ РјРµР№РЅР° - РЅСѓ РѕС‡РµРЅСЊ СЃС‚СЂР°РЅРЅР°СЏ С€С‚СѓРєР°
+    //РјРµР№РЅ - СЌС‚Рѕ РІСЃРµРіРґР° РѕС‚РґРµР»СЊРЅС‹Р№ РєР»Р°СЃСЃ, РєРѕС‚РѕСЂС‹Р№ РѕС‚РІРµС‡Р°РµС‚ С‚РѕР»СЊРєРѕ Р·Р° Р·Р°РїСѓСЃРє РїСЂРѕРіСЂР°РјРјС‹. РЎС‡РёС‚Р°Р№, С‡С‚Рѕ СЌС‚Рѕ СЃС‚РѕСЂРѕРЅР° РєР»РёРµРЅС‚Р°.
 
-    private long[][] measurementsLinkedList = new long[7][NUMBER_OF_TESTS];//снова меджик намбер
+    private long[][] measurementsLinkedList = new long[7][NUMBER_OF_TESTS];//СЃРЅРѕРІР° РјРµРґР¶РёРє РЅР°РјР±РµСЂ
     private long[] resultTimersLinkedList = new long[7];
 
     private LinkedList<Integer> linkedList = new LinkedList<>();
 
-    void Initialisation(int size) { //логичней этот метод сделать паблик
+    void Initialisation(int size) { //Р»РѕРіРёС‡РЅРµР№ СЌС‚РѕС‚ РјРµС‚РѕРґ СЃРґРµР»Р°С‚СЊ РїР°Р±Р»РёРє
 
         for (int i = 0; i < size; i++) {
             linkedList.add(i);
@@ -24,7 +24,7 @@ class LinkedListMeasurements extends MainFirstEEmodule { //наследование от мейна
         temp = CalculateLinkedListTimers();
     }
 
-    private long[] CalculateLinkedListTimers() { //имя метода с маленькой буквы
+    private long[] CalculateLinkedListTimers() { //РёРјСЏ РјРµС‚РѕРґР° СЃ РјР°Р»РµРЅСЊРєРѕР№ Р±СѓРєРІС‹
         long res = measurementsLinkedList[0][0];
 
         for (int j = 0; j < measurementsLinkedList.length; j++) {    //7
@@ -37,11 +37,11 @@ class LinkedListMeasurements extends MainFirstEEmodule { //наследование от мейна
         return resultTimersLinkedList;
     }
 
-    long[] getResultTimersLinkedList() { //геттеры всегда паблик
+    long[] getResultTimersLinkedList() { //РіРµС‚С‚РµСЂС‹ РІСЃРµРіРґР° РїР°Р±Р»РёРє
         return resultTimersLinkedList;
     }
 
-    private void MeasurementsLinkedList() { //название метода должно начинаться с маленькой буквы и глагола
+    private void MeasurementsLinkedList() { //РЅР°Р·РІР°РЅРёРµ РјРµС‚РѕРґР° РґРѕР»Р¶РЅРѕ РЅР°С‡РёРЅР°С‚СЊСЃСЏ СЃ РјР°Р»РµРЅСЊРєРѕР№ Р±СѓРєРІС‹ Рё РіР»Р°РіРѕР»Р°
         Random randomNumber = new Random();
         for (int i = 0; i < NUMBER_OF_TESTS; i++) {
 
@@ -64,7 +64,7 @@ class LinkedListMeasurements extends MainFirstEEmodule { //наследование от мейна
             measurementsLinkedList[3][i] = System.nanoTime() - timerContains;
 
             long timerPopulate = System.nanoTime();
-            List<Integer> newLinkedList = new LinkedList<Integer>(linkedList); //никогда не используется
+            List<Integer> newLinkedList = new LinkedList<Integer>(linkedList); //РЅРёРєРѕРіРґР° РЅРµ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ
             measurementsLinkedList[4][i] = System.nanoTime() - timerPopulate;
 
             long timerIterAdd = System.nanoTime();
