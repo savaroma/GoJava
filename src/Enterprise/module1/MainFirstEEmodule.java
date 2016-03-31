@@ -1,14 +1,16 @@
 package Enterprise.module1;
 
-public class MainFirstEEmodule {
-    static final int NUMBER_OF_TESTS = 10;
+public class MainFirstEEmodule {//»де€ даже подчеркивает, последнее слово в имени класса надо с большой буквы - тогда это будет
+    //кемел-кейс
+    static final int NUMBER_OF_TESTS = 10; //делать переменную статической, но в то же врем€ ограниченной областью видимости -
+    //не паблик - нужны основани€))  онстанты всегда public static final
     private static final int NUM10K = 10000;
     private static final int NUM100K = 100000;
     private static final int NUM1000K = 1000000;
     static long[] temp = new long[7];
 
     public static void main(String[] args) {
-        long[] resArray = new long[7];
+        long[] resArray = new long[7]; // 7 и 4 - меджик намберс
         long[] resLinked = new long[7];
         long[] resTree = new long[4];
         long[] resHash = new long[4];

@@ -5,14 +5,15 @@ import java.util.List;
 import java.util.ListIterator;
 import java.util.Random;
 
-class LinkedListMeasurements extends MainFirstEEmodule {
+class LinkedListMeasurements extends MainFirstEEmodule { //наследование от мейна - ну очень странная штука
+    //мейн - это всегда отдельный класс, который отвечает только за запуск программы. Считай, что это сторона клиента.
 
-    private long[][] measurementsLinkedList = new long[7][NUMBER_OF_TESTS];
+    private long[][] measurementsLinkedList = new long[7][NUMBER_OF_TESTS];//снова меджик намбер
     private long[] resultTimersLinkedList = new long[7];
 
     private LinkedList<Integer> linkedList = new LinkedList<>();
 
-    void Initialisation(int size) {
+    void Initialisation(int size) { //логичней этот метод сделать паблик
 
         for (int i = 0; i < size; i++) {
             linkedList.add(i);
@@ -23,7 +24,7 @@ class LinkedListMeasurements extends MainFirstEEmodule {
         temp = CalculateLinkedListTimers();
     }
 
-    private long[] CalculateLinkedListTimers() {
+    private long[] CalculateLinkedListTimers() { //имя метода с маленькой буквы
         long res = measurementsLinkedList[0][0];
 
         for (int j = 0; j < measurementsLinkedList.length; j++) {    //7
@@ -36,11 +37,11 @@ class LinkedListMeasurements extends MainFirstEEmodule {
         return resultTimersLinkedList;
     }
 
-    long[] getResultTimersLinkedList() {
+    long[] getResultTimersLinkedList() { //геттеры всегда паблик
         return resultTimersLinkedList;
     }
 
-    private void MeasurementsLinkedList() {
+    private void MeasurementsLinkedList() { //название метода должно начинаться с маленькой буквы и глагола
         Random randomNumber = new Random();
         for (int i = 0; i < NUMBER_OF_TESTS; i++) {
 
@@ -63,7 +64,7 @@ class LinkedListMeasurements extends MainFirstEEmodule {
             measurementsLinkedList[3][i] = System.nanoTime() - timerContains;
 
             long timerPopulate = System.nanoTime();
-            List<Integer> newLinkedList = new LinkedList<Integer>(linkedList);
+            List<Integer> newLinkedList = new LinkedList<Integer>(linkedList); //никогда не используется
             measurementsLinkedList[4][i] = System.nanoTime() - timerPopulate;
 
             long timerIterAdd = System.nanoTime();
